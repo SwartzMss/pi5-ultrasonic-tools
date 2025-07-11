@@ -16,15 +16,7 @@ ECHO → BCM24 (pin 18) 请使用 3.3V 电平转换
 ## 依赖
 
 ```bash
-sudo apt install pigpio python3-gpiozero
-sudo systemctl enable pigpiod
-sudo systemctl start pigpiod
-```
-
-或者使用 pip 安装：
-
-```bash
-pip install gpiozero pigpio
+pip install gpiozero lgpio
 ```
 
 ## 示例
