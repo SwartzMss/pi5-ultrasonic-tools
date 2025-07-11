@@ -1,4 +1,9 @@
-from gpiozero import DistanceSensor
+from gpiozero import DistanceSensor, Device
+from gpiozero.pins.lgpio import LGPIOFactory
+
+# Explicitly select ``lgpio`` as the GPIO backend so the code works on
+# Raspberry Pi 5 without relying on environment variables or ``pigpio``.
+Device.pin_factory = LGPIOFactory()
 
 
 class UltrasonicDevice:
