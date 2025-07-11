@@ -15,11 +15,15 @@ class UltrasonicDevice:
             Maximum measurable distance in meters.
         """
 
+        # Do not override ``threshold_distance`` so that ``DistanceSensor``
+        # can use its default value. Passing ``None`` resulted in a ``TypeError``
+        # because the library divides ``threshold_distance`` by ``max_distance``.
+        # By omitting the parameter we avoid that issue and rely on the sane
+        # default provided by ``gpiozero``.
         self.sensor = DistanceSensor(
             echo=echo_pin,
             trigger=trig_pin,
             max_distance=max_distance,
-            threshold_distance=None,
         )
 
     def measure_distance(self, samples=5) -> float:
