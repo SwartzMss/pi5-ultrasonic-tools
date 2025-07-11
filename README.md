@@ -2,7 +2,7 @@
 
 Pi5的超声波传感器使用示例，代码基于 `gpiozero` 库实现。
 
-![连接示意图](doc/device.jpg)
+<img src="doc/device.jpg" alt="Device" width="300" />
 
 ## 接线
 
