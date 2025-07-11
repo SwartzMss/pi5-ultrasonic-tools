@@ -19,6 +19,8 @@ ECHO → BCM24 (pin 18) 请使用 3.3V 电平转换
 pip install gpiozero lgpio
 ```
 
+代码中已显式指定 `lgpio` 作为 GPIO 后端，因此无需额外设置环境变量。
+
 ## 示例
 
 仓库包含 `ultrasonic_device.py` 类和 `main.py` 示例，可用于在树莓派5上读取 HC-SR04 超声波传感器的距离数据。通过命令行参数可设置检测周期和针脚。
