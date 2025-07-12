@@ -12,8 +12,8 @@ def main():
         default=1.0,
         help="测量间隔 (秒)",
     )
-    parser.add_argument("--trig", type=int, default=23, help="TRIG 针脚 (BCM)")
-    parser.add_argument("--echo", type=int, default=24, help="ECHO 针脚 (BCM)")
+    parser.add_argument("--trig", type=int, default=18, help="TRIG 针脚 (BCM)")
+    parser.add_argument("--echo", type=int, default=17, help="ECHO 针脚 (BCM)")
     parser.add_argument(
         "--max-dist",
         type=float,

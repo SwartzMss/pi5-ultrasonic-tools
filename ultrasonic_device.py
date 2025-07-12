@@ -7,7 +7,7 @@ Device.pin_factory = LGPIOFactory()
 
 
 class UltrasonicDevice:
-    def __init__(self, trig_pin=23, echo_pin=24, max_distance=2.0):
+    def __init__(self, trig_pin=18, echo_pin=17, max_distance=2.0):
         """Initialize the ultrasonic sensor using gpiozero.
 
         Parameters
