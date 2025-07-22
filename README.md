@@ -27,7 +27,12 @@ pip install gpiozero lgpio
 ### 运行方式
 
 ```bash
-python3 main.py --interval 1 --trig 18 --echo 17 --max-dist 2.0
+python3 main.py \
+    --interval 1 \
+    --trig 18 \
+    --echo 17 \
+    --max-dist 2.0 \
+    --sample-wait 0.1
 ```
 
 终端会按指定间隔打印测定的距离。
@@ -38,3 +43,4 @@ python3 main.py --interval 1 --trig 18 --echo 17 --max-dist 2.0
 - `--trig` TRIG 针脚（BCM），默认18
 - `--echo` ECHO 针脚（BCM），默认17
 - `--max-dist` 最大测量距离（米），默认2.0
+- `--sample-wait` 两次采样之间的等待时间（秒），默认0.1
