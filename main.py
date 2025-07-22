@@ -20,12 +20,19 @@ def main():
         default=2.0,
         help="最大测量距离 (米)",
     )
+    parser.add_argument(
+        "--sample-wait",
+        type=float,
+        default=0.1,
+        help="两次采样之间的等待时间 (秒)",
+    )
     args = parser.parse_args()
 
     device = UltrasonicDevice(
         trig_pin=args.trig,
         echo_pin=args.echo,
         max_distance=args.max_dist,
+        sample_wait=args.sample_wait,
     )
     try:
         while True:
